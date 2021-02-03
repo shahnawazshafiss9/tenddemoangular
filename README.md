@@ -1,5 +1,16 @@
 # Uxtrendzdemo
 
+## install bootstrap
+
+```
+https://valor-software.com/ngx-bootstrap/
+
+npm install ngx-bootstrap --save
+
+ng add ngx-bootstrap 
+
+```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
 ## Development server

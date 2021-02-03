@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col-md-6">
+    <select class="form-control" (change)="getProductVal($event)">
+      <option value="default">Select Product</option>
+      <option value="Leptop">Leptop</option>
+      <option value="Mobile">Mobile</option>
+      <option value="TV">TV</option>
+      <option value="Washing Maching">Washing Maching</option>
+    </select>
+  </div>
+  <div class="col-md-6" [ngSwitch]="selectedProduct">
+    <h2 class="text-success" *ngSwitchCase>Please Select any product</h2>
+    <h2 class="text-success" *ngSwitchCase="'Leptop'">Leptop</h2>
+    <h2 class="text-success" *ngSwitchCase="'Mobile'">Mobile</h2>
+    <h2 class="text-success" *ngSwitchCase="'TV'">TV</h2>
+    <h2 class="text-success" *ngSwitchCase="'Washing Maching'">Washing Maching</h2>
+  </div>
+</div>

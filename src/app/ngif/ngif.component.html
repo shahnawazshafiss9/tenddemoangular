@@ -1,0 +1,20 @@
+<div class="container">
+  <button class="btn btn-success" (click)="onCreateButton()">Submit</button>
+  exmapl1
+  <p *ngIf="false">gx-bootstrap contains all core (and not only) Bootstrap components powered by Angular. So you don't need to include original JS components, but we are using markup and css provided by Bootstrap.</p>
+  exmapl2
+  <p *ngIf="isValid else elseblock">gx-bootstrap contains all core (and not only) Bootstrap components powered by Angular. So you don't need to include original JS components, but we are using markup and css provided by Bootstrap.</p>
+  <ng-template #elseblock>
+    <div>No block has been created!!</div>
+  </ng-template>
+  exmapl3
+  <p *ngIf="isValid; then thenblock else elseblock1">gx-bootstrap contains all core (and not only) Bootstrap components powered by Angular. So you don't need to include original JS components, but we are using markup and css provided by Bootstrap.</p>
+  <ng-template #thenblock>
+    <div>Then No block has been created!!</div>
+  </ng-template>
+
+  <ng-template #elseblock1>
+    <div>No block has been created!!</div>
+  </ng-template>
+
+  </div>
