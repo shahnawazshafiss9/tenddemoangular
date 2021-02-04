@@ -1,3 +1,16 @@
 <!-- <app-ngfor></app-ngfor> -->
 <!-- <app-ngif></app-ngif> -->
-<app-ngswitch></app-ngswitch>
+<!-- <app-ngswitch></app-ngswitch> -->
+<div class="container mt-3">
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="about">About Us</a></li>
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="products">Products</a></li>
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>
+</div>
