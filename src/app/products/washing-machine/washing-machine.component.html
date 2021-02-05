@@ -1,19 +1,19 @@
 <div class="page-area">
   <div class="text-center">
-    <h2>Home</h2>
+    <h5 class="card-title">Washing</h5>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
       standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
       type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
       remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
       Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
       of Lorem Ipsum.</p>
-    <hr />
-    <div class="products">
-      <ng-container *ngIf="statusOnline">
-        <div *ngFor="let product of products">
-          {{product.name}}
-        </div>
-      </ng-container>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <img src="https://images.unsplash.com/photo-1460819739742-50e4486578f5" class="card-img-top" alt="...">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+        <a routerLink="washing-machine" class="btn btn-primary">Add To Cart</a>
     </div>
   </div>
 </div>
