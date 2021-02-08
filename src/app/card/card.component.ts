@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Message} from '../appService/alertMessage.service'
 
 @Component({
   selector: 'app-card',
@@ -11,5 +12,11 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  btnAlert(){
+    const message = new Message();
+    message.onSubmitAlert();
+  }
+
 
 }

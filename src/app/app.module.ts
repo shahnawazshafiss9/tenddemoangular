@@ -18,6 +18,9 @@ import { MobileComponent } from './products/mobile/mobile.component';
 import { TvComponent } from './products/tv/tv.component';
 import { WashingMachineComponent } from './products/washing-machine/washing-machine.component';
 import { CardComponent } from './card/card.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Card2Component } from './card2/card2.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,6 +35,7 @@ const appRoutes: Routes = [
       { path: 'washing-machine', component: WashingMachineComponent }
     ]
   },
+  { path: 'buyproduct', component: ParentComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -50,7 +54,10 @@ const appRoutes: Routes = [
     MobileComponent,
     TvComponent,
     WashingMachineComponent,
-    CardComponent
+    CardComponent,
+    ParentComponent,
+    ChildComponent,
+    Card2Component
   ],
   imports: [
     BrowserModule,
