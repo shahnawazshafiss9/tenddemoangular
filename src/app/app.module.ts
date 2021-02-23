@@ -21,6 +21,13 @@ import { CardComponent } from './card/card.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { Card2Component } from './card2/card2.component';
+import { DesignutilityService } from './appService/designutility.service';
+import { HttpClientModule } from '@angular/common/http';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,7 +35,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   {
     path: 'products', component: ProductsComponent, children: [
-     // { path: '', component: ProductsComponent },
+      // { path: '', component: ProductsComponent },
       { path: 'leptop', component: LeptopComponent },
       { path: 'mobile', component: MobileComponent },
       { path: 'tv', component: TvComponent },
@@ -36,6 +43,7 @@ const appRoutes: Routes = [
     ]
   },
   { path: 'buyproduct', component: ParentComponent },
+  { path: 'lifecyclehook', component: LifecyclehookComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -57,16 +65,22 @@ const appRoutes: Routes = [
     CardComponent,
     ParentComponent,
     ChildComponent,
-    Card2Component
+    Card2Component,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
+    LifecyclehookComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     BrowserAnimationsModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DesignutilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

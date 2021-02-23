@@ -3,6 +3,10 @@
     <h5 class="card-title">Mobile</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
       content.</p>
+      <ng-container *ngFor="let lep of leptop">
+        <p>{{lep.title}}</p>
+      </ng-container>
+
       <button (click)="btnAlert()" class="btn btn-primary">Know more about Mobile</button>
   </div>
 </div>

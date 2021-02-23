@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Message} from '../appService/alertMessage.service'
+import { Message } from '../appService/alertMessage.service'
+import { DesignutilityService } from '../appService/designutility.service';
 @Component({
   selector: 'app-card2',
   templateUrl: './card2.component.html',
@@ -7,13 +8,15 @@ import {Message} from '../appService/alertMessage.service'
 })
 export class Card2Component implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private _msgService: DesignutilityService) { }
+  leptop = {};
+  ngOnInit(){
+    // this.leptop = this._msgService.product.name;
+    this._msgService.product().subscribe(restData => this.leptop = restData);
   }
-  btnAlert(){
-    const meg = new Message();
-    meg.onSubmitAlert();
+
+  btnAlert() {
+    this._msgService.onSubmitAlert();
   }
 
 }
